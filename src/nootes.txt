@@ -1,0 +1,8 @@
+
+
+---RTK Query
+
+*It helps us fetch data without manual code and amnagement
+
+*it is efficient as it catches data through name nad doesnot make api calls again and again on different pages requiring same data through us eof its catching abilities
+
