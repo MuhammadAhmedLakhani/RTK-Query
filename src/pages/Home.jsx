@@ -1,30 +1,39 @@
 import { Link } from "react-router-dom"
 import  {useGetAllProductsQuery} from "../rtk Query/index.js"
 import Shop from "./Shop.jsx"
+import { useEffect } from "react"
 
 
 
 function Home (){
-         const {data ,error, isLoading}  =               useGetAllProductsQuery("productsData")
+        //  const {data ,error, isLoading}  =               useGetAllProductsQuery("productsData")
 
-                                 // this is the name passed for catching data again with name, no link to reducerPath
+        //                          // this is the name passed for catching data again with name, no link to reducerPath
 
-           console.log("data-->",data) 
-           console.log("isLoading-->",isLoading) 
-           console.log("error-->",error) 
+        //    console.log("data-->",data) 
+        //    console.log("isLoading-->",isLoading) 
+        //    console.log("error-->",error) 
+
+        useEffect(()=>{
+            fetch("https://fakestoreapi.com/products/")
+            .then((res)=>res.json())
+            .then((res)=>console.log("res",res))
+
+        },[])
+
 
     return (
         <>
         <h1>Home</h1> 
         <Link to = {"/shop"} >Shop</Link>
-        <ul>
+        {/* <ul>
         {
 
           data && data.map((v, i) => {
             return <li key = {v.id}>{v.title}</li>
           })
         }
-        </ul>
+        </ul> */}
         </>
     )
 }

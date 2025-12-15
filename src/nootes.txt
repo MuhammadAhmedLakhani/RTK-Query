@@ -6,3 +6,9 @@
 
 *it is efficient as it catches data through name nad doesnot make api calls again and again on different pages requiring same data through us eof its catching abilities
 
+*if you use useEffect and fetch for getting data from api 
+
+*you notice that seprata api call is made when you switch pages through Link compoent
+
+*that is where RTK-Query is best as sytem efficient and also doesnot allow multiple calls between pages even once as it maintain histort through use of  caching
+
