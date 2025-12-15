@@ -1,14 +1,15 @@
 import { Provider } from "react-redux"
 import store from "./store"
 import Home from "./pages/Home"
+import AppRouter from "./config/router"
 
 
 function App() {
 
   return (
     <Provider store={store}>
-      <h1>Vite</h1>
-      <Home />
+
+        <AppRouter/>
 
     </Provider>
   )

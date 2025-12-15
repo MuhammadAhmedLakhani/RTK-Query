@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom"
 import  {useGetAllProductsQuery} from "../rtk Query/index.js"
-import Shop from "./Shop.jsx"
 
 
 
-function Home (){
+function Shop (){
          const {data ,error, isLoading}  =               useGetAllProductsQuery("productsData")
 
                                  // this is the name passed for catching data again with name, no link to reducerPath
@@ -15,8 +14,8 @@ function Home (){
 
     return (
         <>
-        <h1>Home</h1> 
-        <Link to = {"/shop"} >Shop</Link>
+        <h1>Shop</h1> 
+        <Link to  = {"/"}>Home</Link>
         <ul>
         {
 
@@ -29,4 +28,4 @@ function Home (){
     )
 }
 
-export default Home;
+export default Shop;
