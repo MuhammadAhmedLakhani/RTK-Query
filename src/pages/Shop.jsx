@@ -5,20 +5,22 @@ import { useEffect } from "react"
 
 
 function Shop() {
-  //  const {data ,error, isLoading}  =               useGetAllProductsQuery("productsData")
+   const {data ,error, isLoading}  =               useGetAllProductsQuery("productsData",{
+    pollingInterval:2000
+   })
 
-  //                          // this is the name passed for catching data again with name, no link to reducerPath
+                           // this is the name passed for catching data again with name, no link to reducerPath
 
-  //    console.log("data-->",data) 
-  //    console.log("isLoading-->",isLoading) 
-  //    console.log("error-->",error) 
+     console.log("data-->",data) 
+     console.log("isLoading-->",isLoading) 
+     console.log("error-->",error) 
 
-  useEffect(() => {
-    fetch("https://fakestoreapi.com/products/")
-      .then((res) => res.json())
-      .then((res) => console.log("res", res))
+  // useEffect(() => {
+  //   fetch("https://fakestoreapi.com/products/")
+  //     .then((res) => res.json())
+  //     .then((res) => console.log("res", res))
 
-  }, [])
+  // }, [])
 
 
   return (
@@ -26,7 +28,7 @@ function Shop() {
       <h1>Shop</h1> 
         <Link to  = {"/"}>Home</Link>
 
-{/* 
+{ 
       <ul>
         {
 
@@ -34,7 +36,7 @@ function Shop() {
             return <li key={v.id}>{v.title}</li>
           })
         }
-      </ul> */}
+      </ul> }
     </>
   )
 }
